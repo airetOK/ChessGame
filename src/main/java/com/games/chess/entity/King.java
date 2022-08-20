@@ -2,8 +2,9 @@ package com.games.chess.entity;
 
 public class King extends Chessman {
 
-    public King(Position startPosition, Color color) {
-        super(startPosition, color);
+    public King(String id, Position startPosition, Color color) {
+        super(id, startPosition, color);
+
     }
 
     @Override

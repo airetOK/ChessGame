@@ -2,8 +2,8 @@ package com.games.chess.entity;
 
 public class Rook extends Chessman {
 
-    public Rook(Position startPosition, Color color) {
-        super(startPosition, color);
+    public Rook(String id, Position startPosition, Color color) {
+        super(id, startPosition, color);
     }
 
     @Override
