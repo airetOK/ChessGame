@@ -2,8 +2,8 @@ package com.games.chess.entity;
 
 public class Bishop extends Chessman {
 
-    public Bishop(Position startPosition, Color color) {
-        super(startPosition, color);
+    public Bishop(String id, Position startPosition, Color color) {
+        super(id, startPosition, color);
     }
 
     @Override

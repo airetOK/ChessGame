@@ -2,8 +2,8 @@ package com.games.chess.entity;
 
 public class Pawn extends Chessman {
 
-    public Pawn(Position startPosition, Color color) {
-        super(startPosition, color);
+    public Pawn(String id, Position startPosition, Color color) {
+        super(id, startPosition, color);
     }
 
     @Override
