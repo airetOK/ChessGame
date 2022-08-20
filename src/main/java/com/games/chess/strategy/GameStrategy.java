@@ -26,4 +26,6 @@ public abstract class GameStrategy {
     }
 
     public abstract void execute(Action action, Position position);
+
+    public abstract void checkActionValidity(Action action);
 }
