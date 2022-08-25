@@ -1,14 +1,16 @@
 package com.games.chess.entity;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class GameField {
 
     private List<Chessman> chessmen;
-    private Position[][] cells;
+    private List<Position> cells;
 
-    public GameField(List<Chessman> chessmen, Position[][] cells) {
+    public GameField() {
+    }
+
+    public GameField(List<Chessman> chessmen, List<Position> cells) {
         this.chessmen = chessmen;
         this.cells = cells;
     }
@@ -21,11 +23,11 @@ public class GameField {
         this.chessmen = chessmen;
     }
 
-    public Position[][] getCells() {
+    public List<Position> getCells() {
         return cells;
     }
 
-    public void setCells(Position[][] cells) {
+    public void setCells(List<Position> cells) {
         this.cells = cells;
     }
 
@@ -37,7 +39,7 @@ public class GameField {
     public String toString() {
         return "GameField{" +
                 "chessmen=" + chessmen +
-                ", cells=" + Arrays.toString(cells) +
+                ", cells=" + cells +
                 '}';
     }
 }

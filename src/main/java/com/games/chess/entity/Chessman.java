@@ -9,10 +9,11 @@ public abstract class Chessman implements Moveable {
     private final Position startPosition;
     private final Color color;
 
-    public Chessman(String id, Position startPosition, Color color) {
+    public Chessman(String id, Position startPosition, Color color, Boolean isAlive) {
         this.id = id;
         this.startPosition = startPosition;
         this.color = color;
+        this.isAlive = isAlive;
     }
 
     public Position getCurrentPosition() {
@@ -41,17 +42,5 @@ public abstract class Chessman implements Moveable {
 
     public String getId() {
         return id;
-    }
-
-    @Override
-    public String toString() {
-        return "Chessman{" +
-                "id='" + id + '\'' +
-                ", currentPosition=" + currentPosition +
-                ", moveTo=" + moveTo +
-                ", isAlive=" + isAlive +
-                ", startPosition=" + startPosition +
-                ", color=" + color +
-                '}';
     }
 }

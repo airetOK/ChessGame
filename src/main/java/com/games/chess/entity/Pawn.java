@@ -2,8 +2,8 @@ package com.games.chess.entity;
 
 public class Pawn extends Chessman {
 
-    public Pawn(String id, Position startPosition, Color color) {
-        super(id, startPosition, color);
+    public Pawn(String id, Position startPosition, Color color, Boolean isAlive) {
+        super(id, startPosition, color, isAlive);
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Pawn extends Chessman {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Pawn";
     }
 
     @Override
