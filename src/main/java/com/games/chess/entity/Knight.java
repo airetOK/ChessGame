@@ -2,8 +2,8 @@ package com.games.chess.entity;
 
 public class Knight extends Chessman {
 
-    public Knight(String id, Position startPosition, Color color) {
-        super(id, startPosition, color);
+    public Knight(String id, Position startPosition, Color color, Boolean isAlive) {
+        super(id, startPosition, color, isAlive);
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Knight extends Chessman {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Knight";
     }
 
     @Override

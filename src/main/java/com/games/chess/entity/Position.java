@@ -14,6 +14,12 @@ public class Position {
         this.chessman = chessman;
     }
 
+    public Position(String name, Boolean isEmpty, Boolean isKingThere) {
+        this.name = name;
+        this.isEmpty = isEmpty;
+        this.isKingThere = isKingThere;
+    }
+
     public String getName() {
         return name;
     }

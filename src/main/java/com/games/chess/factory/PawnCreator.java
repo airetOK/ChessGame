@@ -9,7 +9,7 @@ public class PawnCreator implements ChessCreator {
 
     @Override
     public Chessman create(String id, Position position, Color color) {
-        return new Pawn(id, position, color);
+        return new Pawn(id, position, color, true);
     }
 
 }
