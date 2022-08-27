@@ -1,5 +1,6 @@
 package com.games.chess.entity;
 
+import com.games.chess.observer.EventManager;
 import com.games.chess.strategy.GameContext;
 import com.games.chess.strategy.GameStrategy;
 import com.games.chess.util.ChessUtil;
@@ -18,7 +19,7 @@ public class GameProcess {
     private static Map<String, GameStrategy> strategies;
     private List<Chessman> chessmen;
     private GameField gameField;
-    // private EventManager events;
+    private EventManager events;
 
     public void init() {
         List<Chessman> whiteChessmen = createChessmen(Color.WHITE);
