@@ -6,6 +6,6 @@ public class KnightCreator implements ChessCreator {
 
     @Override
     public Chessman create(String id, Position position, Color color) {
-        return new Knight(id, position, color, true);
+        return new Knight(id, color, true);
     }
 }
