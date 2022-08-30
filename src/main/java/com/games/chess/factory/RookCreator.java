@@ -6,6 +6,6 @@ public class RookCreator implements ChessCreator {
 
     @Override
     public Chessman create(String id, Position position, Color color) {
-        return new Rook(id, position, color, true);
+        return new Rook(id, color, true);
     }
 }

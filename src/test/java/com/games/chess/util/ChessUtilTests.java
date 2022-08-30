@@ -23,13 +23,6 @@ class ChessApplicationTests {
         assertEquals("PBD7", blackPawns.get(3).getId());
         assertEquals("PBH7", blackPawns.get(7).getId());
 
-        assertEquals("A2", whitePawns.get(0).getCurrentPosition().getName());
-        assertEquals("D2", whitePawns.get(3).getCurrentPosition().getName());
-        assertEquals("H2", whitePawns.get(7).getCurrentPosition().getName());
-        assertEquals("A7", blackPawns.get(0).getCurrentPosition().getName());
-        assertEquals("D7", blackPawns.get(3).getCurrentPosition().getName());
-        assertEquals("H7", blackPawns.get(7).getCurrentPosition().getName());
-
         assertEquals(true, whitePawns.get(0).getAlive());
         assertEquals(true, blackPawns.get(0).getAlive());
     }
@@ -43,11 +36,6 @@ class ChessApplicationTests {
         assertEquals("HWG1", whiteKnights.get(1).getId());
         assertEquals("HBB8", blackKnights.get(0).getId());
         assertEquals("HBG8", blackKnights.get(1).getId());
-
-        assertEquals("B1", whiteKnights.get(0).getCurrentPosition().getName());
-        assertEquals("G1", whiteKnights.get(1).getCurrentPosition().getName());
-        assertEquals("B8", blackKnights.get(0).getCurrentPosition().getName());
-        assertEquals("G8", blackKnights.get(1).getCurrentPosition().getName());
 
         assertEquals(true, whiteKnights.get(0).getAlive());
         assertEquals(true, blackKnights.get(0).getAlive());
@@ -63,11 +51,6 @@ class ChessApplicationTests {
         assertEquals("BBC8", blackBishops.get(0).getId());
         assertEquals("BBF8", blackBishops.get(1).getId());
 
-        assertEquals("C1", whiteBishops.get(0).getCurrentPosition().getName());
-        assertEquals("F1", whiteBishops.get(1).getCurrentPosition().getName());
-        assertEquals("C8", blackBishops.get(0).getCurrentPosition().getName());
-        assertEquals("F8", blackBishops.get(1).getCurrentPosition().getName());
-
         assertEquals(true, whiteBishops.get(0).getAlive());
         assertEquals(true, blackBishops.get(0).getAlive());
     }
@@ -82,11 +65,6 @@ class ChessApplicationTests {
         assertEquals("RBA8", blackRooks.get(0).getId());
         assertEquals("RBH8", blackRooks.get(1).getId());
 
-        assertEquals("A1", whiteRooks.get(0).getCurrentPosition().getName());
-        assertEquals("H1", whiteRooks.get(1).getCurrentPosition().getName());
-        assertEquals("A8", blackRooks.get(0).getCurrentPosition().getName());
-        assertEquals("H8", blackRooks.get(1).getCurrentPosition().getName());
-
         assertEquals(true, whiteRooks.get(0).getAlive());
         assertEquals(true, blackRooks.get(0).getAlive());
     }
@@ -98,9 +76,6 @@ class ChessApplicationTests {
         assertEquals("QWD1", whiteQueen.getId());
         assertEquals("QBD8", blackQueen.getId());
 
-        assertEquals("D1", whiteQueen.getCurrentPosition().getName());
-        assertEquals("D8", blackQueen.getCurrentPosition().getName());
-
         assertEquals(true, whiteQueen.getAlive());
         assertEquals(true, blackQueen.getAlive());
     }
@@ -111,9 +86,6 @@ class ChessApplicationTests {
         King blackKing = ChessUtil.createKing(Color.BLACK);
         assertEquals("KWE1", whiteKing.getId());
         assertEquals("KBE8", blackKing.getId());
-
-        assertEquals("E1", whiteKing.getCurrentPosition().getName());
-        assertEquals("E8", blackKing.getCurrentPosition().getName());
 
         assertEquals(true, whiteKing.getAlive());
         assertEquals(true, blackKing.getAlive());

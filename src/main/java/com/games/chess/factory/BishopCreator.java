@@ -6,6 +6,6 @@ public class BishopCreator implements ChessCreator {
 
     @Override
     public Chessman create(String id, Position position, Color color) {
-        return new Bishop(id, position, color, true);
+        return new Bishop(id, color, true);
     }
 }

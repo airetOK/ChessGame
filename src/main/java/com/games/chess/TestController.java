@@ -1,16 +1,16 @@
 package com.games.chess;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.Map;
 
-@RestController
+@Controller
 public class TestController {
 
     @GetMapping("/test")
-    public Map<String, String> thymeleafView() {
-        return Collections.singletonMap("id", "2123");
+    public String thymeleafView() {
+        return "game";
 
     }
 

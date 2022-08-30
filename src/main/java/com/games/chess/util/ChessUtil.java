@@ -30,20 +30,16 @@ public class ChessUtil {
     public static List<Pawn> createPawns(Color color) {
         List<Pawn> pawns = new LinkedList<>();
         Pawn pawn;
-        Position position;
         for (int i = 0; i < 8; i++) {
             if (color.equals(Color.WHITE)) {
                 String whitePos = stringBuilder.append(CHESS_LITERALS.charAt(i)).append("2").toString();
                 stringBuilder.setLength(0);
-                position = new Position(whitePos, false, false);
-                pawn = new Pawn(String.format("%s%s", "PW", whitePos), position, Color.WHITE, true);
+                pawn = new Pawn(String.format("%s%s", "PW", whitePos), Color.WHITE, true);
             } else {
                 String blackPos = stringBuilder.append(CHESS_LITERALS.charAt(i)).append("7").toString();
                 stringBuilder.setLength(0);
-                position = new Position(blackPos, false, false);
-                pawn = new Pawn(String.format("%s%s", "PB", blackPos), position, Color.BLACK, true);
+                pawn = new Pawn(String.format("%s%s", "PB", blackPos), Color.BLACK, true);
             }
-            pawn.setCurrentPosition(position);
             pawns.add(pawn);
         }
         return pawns;
@@ -53,20 +49,16 @@ public class ChessUtil {
         final String LITERALS = "BG";
         List<Knight> knights = new LinkedList<>();
         Knight knight;
-        Position position;
         for (int i = 0; i < 2; i++) {
             if (color.equals(Color.WHITE)) {
                 String whitePos = stringBuilder.append(LITERALS.charAt(i)).append("1").toString();
                 stringBuilder.setLength(0);
-                position = new Position(whitePos, false, false);
-                knight = new Knight(String.format("%s%s", "HW", whitePos), position, Color.WHITE, true);
+                knight = new Knight(String.format("%s%s", "HW", whitePos), Color.WHITE, true);
             } else {
                 String blackPos = stringBuilder.append(LITERALS.charAt(i)).append("8").toString();
                 stringBuilder.setLength(0);
-                position = new Position(blackPos, false, false);
-                knight = new Knight(String.format("%s%s", "HB", blackPos), position, Color.BLACK, true);
+                knight = new Knight(String.format("%s%s", "HB", blackPos), Color.BLACK, true);
             }
-            knight.setCurrentPosition(position);
             knights.add(knight);
         }
         return knights;
@@ -76,20 +68,16 @@ public class ChessUtil {
         final String LITERALS = "CF";
         List<Bishop> bishops = new LinkedList<>();
         Bishop bishop;
-        Position position;
         for (int i = 0; i < 2; i++) {
             if (color.equals(Color.WHITE)) {
                 String whitePos = stringBuilder.append(LITERALS.charAt(i)).append("1").toString();
                 stringBuilder.setLength(0);
-                position = new Position(whitePos, false, false);
-                bishop = new Bishop(String.format("%s%s", "BW", whitePos), position, Color.WHITE, true);
+                bishop = new Bishop(String.format("%s%s", "BW", whitePos), Color.WHITE, true);
             } else {
                 String blackPos = stringBuilder.append(LITERALS.charAt(i)).append("8").toString();
                 stringBuilder.setLength(0);
-                position = new Position(blackPos, false, false);
-                bishop = new Bishop(String.format("%s%s", "BB", blackPos), position, Color.BLACK, true);
+                bishop = new Bishop(String.format("%s%s", "BB", blackPos), Color.BLACK, true);
             }
-            bishop.setCurrentPosition(position);
             bishops.add(bishop);
         }
         return bishops;
@@ -99,20 +87,16 @@ public class ChessUtil {
         final String LITERALS = "AH";
         List<Rook> rooks = new LinkedList<>();
         Rook rook;
-        Position position;
         for (int i = 0; i < 2; i++) {
             if (color.equals(Color.WHITE)) {
                 String whitePos = stringBuilder.append(LITERALS.charAt(i)).append("1").toString();
                 stringBuilder.setLength(0);
-                position= new Position(whitePos, false, false);
-                rook = new Rook(String.format("%s%s", "RW", whitePos), position, Color.WHITE, true);
+                rook = new Rook(String.format("%s%s", "RW", whitePos), Color.WHITE, true);
             } else {
                 String blackPos = stringBuilder.append(LITERALS.charAt(i)).append("8").toString();
                 stringBuilder.setLength(0);
-                position = new Position(blackPos, false, false);
-                rook = new Rook(String.format("%s%s", "RB", blackPos), position, Color.BLACK, true);
+                rook = new Rook(String.format("%s%s", "RB", blackPos), Color.BLACK, true);
             }
-            rook.setCurrentPosition(position);
             rooks.add(rook);
         }
         return rooks;
@@ -120,37 +104,29 @@ public class ChessUtil {
 
     public static Queen createQueen(Color color) {
         Queen queen;
-        Position position;
         if (color.equals(Color.WHITE)) {
             String whitePos = stringBuilder.append("D").append("1").toString();
             stringBuilder.setLength(0);
-            position = new Position(whitePos, false, false);
-            queen = new Queen(String.format("%s%s", "QW", whitePos), position, Color.WHITE, true);
+            queen = new Queen(String.format("%s%s", "QW", whitePos), Color.WHITE, true);
         } else {
             String blackPos = stringBuilder.append("D").append("8").toString();
             stringBuilder.setLength(0);
-            position = new Position(blackPos, false, false);
-            queen = new Queen(String.format("%s%s", "QB", blackPos), position, Color.BLACK, true);
+            queen = new Queen(String.format("%s%s", "QB", blackPos), Color.BLACK, true);
         }
-        queen.setCurrentPosition(position);
         return queen;
     }
 
     public static King createKing(Color color) {
         King king;
-        Position position;
         if (color.equals(Color.WHITE)) {
             String whitePos = stringBuilder.append("E").append("1").toString();
             stringBuilder.setLength(0);
-            position = new Position(whitePos, false, false);
-            king = new King(String.format("%s%s", "KW", whitePos), position, Color.WHITE, true);
+            king = new King(String.format("%s%s", "KW", whitePos), Color.WHITE, true);
         } else {
             String blackPos = stringBuilder.append("E").append("8").toString();
             stringBuilder.setLength(0);
-            position = new Position(blackPos, false, false);
-            king = new King(String.format("%s%s", "KB", blackPos), position, Color.BLACK, true);
+            king = new King(String.format("%s%s", "KB", blackPos), Color.BLACK, true);
         }
-        king.setCurrentPosition(position);
         return king;
     }
 
